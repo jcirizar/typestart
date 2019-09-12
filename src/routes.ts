@@ -1,5 +1,5 @@
 import {Router} from "express";
-import calculations from './modules/calculations'
+import calculations from './modules/calculations';
 
 const routes: Router = Router();
 
