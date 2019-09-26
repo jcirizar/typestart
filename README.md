@@ -3,7 +3,7 @@
 
 
 ```bash
-git clone git@github.com:jcirizar/typestart.git
+git clone https://github.com/jcirizar/typestart.git
 cd typestart
 npm install
 ```
@@ -11,9 +11,8 @@ npm install
 ## Develop
 
 ### Run server and reload on changes
-`npm run watch:server`
-### Run tests and rerun on changes
-`npm run watch:test`
-
-## Deploy
-To be done ...
+`npm run server`
+### Run tests
+`npm test`
+### Build
+`npm run build`
