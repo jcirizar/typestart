@@ -1,3 +1,2 @@
-import calculations from './calculations.route';
-
-export default calculations;
+export {routes} from './src/calculations.route';
+export * from './src/calculations.model';

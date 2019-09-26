@@ -1,8 +1,9 @@
-import {Router} from "express";
-import calculations from './modules/calculations';
+import {Request, Response, Router} from 'express';
+import {routes as calcRoutes} from './modules/calculations';
 
 const routes: Router = Router();
 
-routes.use('/api', calculations);
+
+routes.use('/', calcRoutes);
 
 export default routes;

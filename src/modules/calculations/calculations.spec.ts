@@ -10,7 +10,7 @@ describe('Calculations', () => {
 
     it('Should add 2 numbers', (done) => {
       query
-        .get('/api/addition')
+        .get('/addition')
         .query({
           number1: 6,
           number2: 8
@@ -28,7 +28,7 @@ describe('Calculations', () => {
 
     it('Should subtract 2 numbers', (done) => {
       query
-        .get('/api/subtraction')
+        .get('/subtraction')
         .query({
           number1: 20,
           number2: 8

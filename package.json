@@ -1,7 +1,7 @@
 {
   "name": "typestart",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Express Typescript Server",
   "main": "dist/server.js",
   "dependencies": {
     "axios": "^0.19.0",
@@ -10,20 +10,20 @@
     "cross-env": "^5.2.1",
     "express": "^4.17.1",
     "helmet": "^3.21.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "config": "latest"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0",
     "@types/chai": "^4.2.2",
     "@types/compression": "^1.0.1",
-    "@types/lodash": "^4.14.138",
+    "@types/config": "0.0.34",
+    "@types/helmet": "0.0.44",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.5",
     "@types/supertest": "^2.0.8",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
     "nodemon": "^1.19.2",
-    "npm-run-all": "^4.1.5",
     "supertest": "^4.0.2",
     "ts-mocha": "^6.0.0",
     "ts-node": "^8.3.0",
@@ -32,13 +32,8 @@
   },
   "scripts": {
     "start": "node dist/server.js",
-    "serve": "npm run build && run-p watch:*",
-    "server": "run-p server:*",
+    "serve": "nodemon -e ts -w src -x ts-node src/server.ts",
     "build": "tsc --build tsconfig.prod.json",
-    "server:compile": "nodemon -e ts -w ./src -x tsc",
-    "server:start": "nodemon --delay 2.5 dist/server.js",
-    "watch:server": "run-p server:*",
-    "watch:test": "npm run test -- -w",
     "test": "cross-env PORT=9001 ts-mocha --recursive src/modules/**/**.spec.ts"
   },
   "repository": {

@@ -1,5 +1,5 @@
 import {Request, Response} from 'express';
-import {add, subtract} from "./calculations.model";
+import {add, subtract} from './calculations.model';
 
 export function subtraction(req: Request, res: Response): Response {
   return res.json({
